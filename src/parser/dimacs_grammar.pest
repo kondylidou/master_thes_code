@@ -1,0 +1,8 @@
+file = { SOI ~ (comment ~ "\n"*)* ~ problem ~ "\n"* ~ (clause ~ "\n"*)* ~ clause? ~ EOI }
+comment = _{ "c" ~ (!"\n" ~ ANY)* ~ "\n" }
+problem = _{ "p" ~ ("cnf" | "sat") ~ n ~ m }
+clause = { (lit ~ "\n"?)+ ~ "0" }
+lit = @{ "-"? ~ !"0" ~ ASCII_DIGIT+ }
+n = @{ ASCII_DIGIT+ }
+m = @{ ASCII_DIGIT+ }
+WHITESPACE = _{ " " }

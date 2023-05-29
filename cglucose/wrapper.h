@@ -1,0 +1,22 @@
+typedef struct CGlucose CGlucose;
+
+CGlucose * cglucose_init (void);
+void cglucose_assume (CGlucose *, int lit);
+int cglucose_solve (CGlucose *);
+int cglucose_val (CGlucose *, int lit);
+void cglucose_add_to_clause (CGlucose * , int lit );
+void cglucose_commit_clause(CGlucose * );
+void cglucose_clean_clause(CGlucose * );
+void cglucose_set_random_seed(CGlucose *, double seed );
+unsigned long long cglucose_solver_nodes(CGlucose *);
+unsigned long long cglucose_nb_learnt(CGlucose *);
+void cglucose_print_incremental_stats(CGlucose *);
+void cglucose_add_to_clause_send (CGlucose * , int lit );
+void cglucose_add_to_clause_receive (CGlucose * , int lit );
+void cglucose_clean_clause_send(CGlucose * );
+void cglucose_clean_clause_receive(CGlucose * );
+void cglucose_commit_incoming_clause(CGlucose *);
+//int cglucose_get_add_conflicts_size(CGlucose * wrapper);
+//int cglucose_get_conflicts_at(CGlucose * wrapper, int pos);
+//int cglucose_get_n_tmp_send(CGlucose * wrapper);
+//int cglucose_get_tmp_send_lit_at(CGlucose * wrapper, int pos);

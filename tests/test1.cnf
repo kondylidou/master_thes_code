@@ -1,0 +1,13 @@
+c FILE: aim-50-1_6-yes1-1.cnf
+c
+c SOURCE: Kazuo Iwama, Eiji Miyano (miyano@cscu.kyushu-u.ac.jp),
+c          and Yuichi Asahiro
+c DESCRIPTION: Artifical instances from generator by source.  Generators
+c              and more information in sat/contributed/iwama.
+c
+c NOTE: Satisfiable
+c
+p cnf 50 80
+-83 16 65 0
+188 1 171 0
+23 132 -59 0
